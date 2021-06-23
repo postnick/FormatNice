@@ -1,13 +1,7 @@
-Attribute VB_Name = "Format_Nice"
 Sub Format_Better()
-Attribute Format_Better.VB_Description = "Formats my Spredsheet"
-Attribute Format_Better.VB_ProcData.VB_Invoke_Func = "M\n14"
-'
 ' Format_Better Macro
 ' Formats my Spredsheet
-'
 ' Keyboard Shortcut: Ctrl+Shift+M
-'
 
 'Clears the Borders
     Cells.Select
@@ -83,32 +77,22 @@ Attribute Format_Better.VB_ProcData.VB_Invoke_Func = "M\n14"
 End Sub
 
 Sub Col_Numbers()
-Attribute Col_Numbers.VB_ProcData.VB_Invoke_Func = "N\n14"
-'
-' Col_Numbers Macro
-' Sets the Column to numbers
-'
-' Keyboard Shortcut: Ctrl+Shift+N
-'
-        
-        Selection.TextToColumns
-    
+    ' Col_Numbers Macro
+    ' Sets the Column to numbers
+    ' Keyboard Shortcut: Ctrl+Shift+N
+    Selection.TextToColumns
+
 End Sub
 
 Sub Col_DATE()
-Attribute Col_DATE.VB_ProcData.VB_Invoke_Func = "D\n14"
-'
-' Col_DATE Macro
-' Sets the Col to Numbers
-'
-' Keyboard Shortcut: Ctrl+Shift+D
-'
+    ' Col_DATE Macro
+    ' Sets the Col to Numbers
+    ' Keyboard Shortcut: Ctrl+Shift+D
     Selection.NumberFormat = "mm/dd/yyyy"
-    
+
 End Sub
 
 Sub Text_Col_Bar()
-Attribute Text_Col_Bar.VB_ProcData.VB_Invoke_Func = "T\n14"
 ' Part of Ctrl + Shift + T
 ' Text_Col_Bar Macro
 '
@@ -122,7 +106,6 @@ End Sub
 
 
 Sub ME2L_Clean()
-Attribute ME2L_Clean.VB_ProcData.VB_Invoke_Func = "R\n14"
 '
 ' ME2L_Clean Macro
 ' Cleanup the ME2l
@@ -173,10 +156,9 @@ Attribute ME2L_Clean.VB_ProcData.VB_Invoke_Func = "R\n14"
     Range(Selection, Selection.End(xlDown)).Select
     
 End Sub
-
+                        
 
 Sub Text000()
-Attribute Text000.VB_ProcData.VB_Invoke_Func = "L\n14"
 '
 ' Text000 Macro Sets the column to TEXT = 000 format
 
@@ -190,10 +172,8 @@ Attribute Text000.VB_ProcData.VB_Invoke_Func = "L\n14"
 'Sets the Formula to TEXT(CELL,"000")
     ActiveCell.FormulaR1C1 = "=IF(RC[1]<999,TEXT(RC[1],""000""),RC[1])"
     
-    
 'Saving the Active Cell Location to return later a few more times
     CellLocation = ActiveCell.Address
-    
     
 'Recall the Cell Location Saved
     Range(CellLocation).Select
@@ -225,5 +205,3 @@ Attribute Text000.VB_ProcData.VB_Invoke_Func = "L\n14"
     Selection.Delete Shift:=xlToLeft
     
 End Sub
-
-

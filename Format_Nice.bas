@@ -1,7 +1,8 @@
+'This is something I use for work but would be useful to many people who use Excel a lot! 
 Sub Format_Better()
 ' Format_Better Macro
 ' Formats my Spredsheet
-    ' Keyboard Shortcut Suggestion: Ctrl+Shift+M
+' Keyboard Shortcut Suggestion: Ctrl+Shift+M
 
 'Clears the Borders
     Cells.Select
@@ -14,7 +15,7 @@ Sub Format_Better()
     Selection.Borders(xlInsideVertical).LineStyle = xlNone
     Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
     
- 'Dissables Word Wrap
+'Dissables Word Wrap
     With Selection
         .HorizontalAlignment = xlLeft
         .VerticalAlignment = xlTop
@@ -27,7 +28,7 @@ Sub Format_Better()
         .MergeCells = False
     End With
     
- 'Clears Color from every cell
+'Clears Color from every cell
     Cells.Select
     With Selection.Interior
         .Pattern = xlNone
@@ -61,7 +62,7 @@ Sub Format_Better()
         .PatternTintAndShade = 0
     End With
     Selection.Font.Bold = True
-     
+
 'Freezes the Top Row
     Range("A1").Select
     With ActiveWindow
@@ -101,7 +102,6 @@ Sub Text_Col_Bar()
         :="|", FieldInfo:=Array(Array(1, 1), Array(2, 1), Array(3, 1)), _
         TrailingMinusNumbers:=True
 End Sub
-                       
 
 Sub Text000()
 ' Text000 Macro Sets the column to TEXT = 000 format
@@ -150,10 +150,6 @@ Sub Text000()
     
 End Sub
 
-                           
-                                            
-                                            
-                                            
 'Most Users will not need this                                            
 'ME2l_CLEAN is a very specific macro dedicated to a task I had to perform at work, may not be needed by everybody                   
 Sub ME2L_Clean()

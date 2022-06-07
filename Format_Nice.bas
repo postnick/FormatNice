@@ -203,3 +203,20 @@ Sub ME2L_Clean()
     Range(Selection, Selection.End(xlDown)).Select
     
 End Sub
+                                                
+Sub CenterAcross()
+' Center Highlighted Text across rather than Merge and Center
+' Keyboard Shortcut: Ctrl+Shift+J
+    With Selection
+        .HorizontalAlignment = xlCenterAcrossSelection
+        .VerticalAlignment = xlBottom
+        .WrapText = True
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+
+End Sub

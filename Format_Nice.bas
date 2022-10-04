@@ -220,3 +220,33 @@ Sub CenterAcross()
     End With
 
 End Sub
+       
+                                                
+Sub Better_Merge_Center()
+   ' Range("A1:C1").Select
+    With Selection
+        .HorizontalAlignment = xlCenterAcrossSelection
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    With Selection.Font
+       ' .Name = "Calibri"
+        .FontStyle = "Bold"
+       ' .Size = 11
+       ' .Strikethrough = False
+       ' .Superscript = False
+       ' .Subscript = False
+       ' .OutlineFont = False
+       ' .Shadow = False
+       ' .Underline = xlUnderlineStyleNone
+       ' .ThemeColor = xlThemeColorLight1
+       ' .TintAndShade = 0
+        .ThemeFont = xlThemeFontMinor
+    End With
+End Sub                                               

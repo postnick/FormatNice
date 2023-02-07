@@ -103,9 +103,10 @@ Sub Text_Col_Bar()
             Semicolon:=False, Comma:=False, Space:=False, Other:=True, OtherChar _
             :="|", FieldInfo:=Array(Array(1, 1), Array(2, 1), Array(3, 1)), _
             TrailingMinusNumbers:=True
-    End Sub
+End Sub
 
-    Sub Text000()
+                    
+Sub Text000()
     ' Text000 Macro Sets the column to TEXT = 000 format
 
     'Declare a space for the cell we will reutrn too

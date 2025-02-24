@@ -1,6 +1,6 @@
 'This is something I use for work but would be useful to many people who use Excel a lot!
 Sub Format_Better()
-    ' Formats my Spredsheet
+    ' Formats my Spreadsheet
     ' Keyboard Shortcut Suggestion: Ctrl+Shift+M
 
     'Clears the Borders
@@ -14,7 +14,7 @@ Sub Format_Better()
         Selection.Borders(xlInsideVertical).LineStyle = xlNone
         Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
 
-    'Dissables Word Wrap
+    ''Disables Word Wrap
         With Selection
             .HorizontalAlignment = xlLeft
             .VerticalAlignment = xlTop
@@ -101,7 +101,7 @@ End Sub
 
 ' Text000 Macro Sets the column to TEXT = 000 format
 Sub Text000()
-    'Declare a space for the cell we will reutrn too
+    'Declare a space for the cell we will return too
         Dim CellLocation As String
     'Selects a column and inserts a column to the left
         Selection.EntireColumn.Offset(0, 0).Select
@@ -132,7 +132,7 @@ Sub Text000()
         ActiveCell.Offset(0, 1).Select
         Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
             :=False, Transpose:=False
-    'Clear the Formula COlumn
+    'Clear the Formula Column
         Range(CellLocation).Select
         Selection.EntireColumn.Offset(0, 0).Select
         Selection.Delete Shift:=xlToLeft

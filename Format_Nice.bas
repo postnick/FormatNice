@@ -1,6 +1,6 @@
 'This is something I use for work but would be useful to many people who use Excel a lot!
 Sub Format_Better()
-    ' Formats my Spreadsheet
+    ' Formats my Spredsheet
     ' Keyboard Shortcut Suggestion: Ctrl+Shift+M
 
     'Clears the Borders
@@ -14,7 +14,7 @@ Sub Format_Better()
         Selection.Borders(xlInsideVertical).LineStyle = xlNone
         Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
 
-    ''Disables Word Wrap
+    'Dissables Word Wrap
         With Selection
             .HorizontalAlignment = xlLeft
             .VerticalAlignment = xlTop
@@ -101,7 +101,7 @@ End Sub
 
 ' Text000 Macro Sets the column to TEXT = 000 format
 Sub Text000()
-    'Declare a space for the cell we will return too
+    'Declare a space for the cell we will reutrn too
         Dim CellLocation As String
     'Selects a column and inserts a column to the left
         Selection.EntireColumn.Offset(0, 0).Select
@@ -132,7 +132,7 @@ Sub Text000()
         ActiveCell.Offset(0, 1).Select
         Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
             :=False, Transpose:=False
-    'Clear the Formula Column
+    'Clear the Formula COlumn
         Range(CellLocation).Select
         Selection.EntireColumn.Offset(0, 0).Select
         Selection.Delete Shift:=xlToLeft
@@ -187,7 +187,7 @@ Sub ME2L_Clean()
     End With
 
     'Selects the entire Range for copy / paste to ME2l Sheet
-    Range("A2:Z2").Select
+    zRange("A2:Z2").Select
     Range(Selection, Selection.End(xlDown)).Select
 End Sub
 
@@ -224,3 +224,4 @@ Sub Better_Merge_Center()
         .ThemeFont = xlThemeFontMinor
     End With
 End Sub
+

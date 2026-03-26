@@ -1,6 +1,6 @@
 'This is something I use for work but would be useful to many people who use Excel a lot!
 Sub Format_Better()
-    ' Formats my Spredsheet
+    ' Formats my Spreadsheet
     ' Keyboard Shortcut Suggestion: Ctrl+Shift+M
 
     'Clears the Borders
@@ -14,7 +14,7 @@ Sub Format_Better()
         Selection.Borders(xlInsideVertical).LineStyle = xlNone
         Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
 
-    'Dissables Word Wrap
+    'Disables Word Wrap
         With Selection
             .HorizontalAlignment = xlLeft
             .VerticalAlignment = xlTop
@@ -101,7 +101,7 @@ End Sub
 
 ' Text000 Macro Sets the column to TEXT = 000 format
 Sub Text000()
-    'Declare a space for the cell we will reutrn too
+    'Declare a space for the cell we will return to
         Dim CellLocation As String
     'Selects a column and inserts a column to the left
         Selection.EntireColumn.Offset(0, 0).Select
@@ -132,14 +132,14 @@ Sub Text000()
         ActiveCell.Offset(0, 1).Select
         Selection.PasteSpecial Paste:=xlPasteValues, Operation:=xlNone, SkipBlanks _
             :=False, Transpose:=False
-    'Clear the Formula COlumn
+    'Clear the Formula Column
         Range(CellLocation).Select
         Selection.EntireColumn.Offset(0, 0).Select
         Selection.Delete Shift:=xlToLeft
 End Sub
 
 'Most Users will not need this
-'ME2l_CLEAN is a very specific macro dedicated to a task I had to perform at work, may not be needed by everybody
+'ME2L_Clean is a very specific macro dedicated to a task I had to perform at work, may not be needed by everybody
 Sub ME2L_Clean()
     ActiveSheet.Sort.SortFields.Clear
     ActiveSheet.AutoFilter.Sort.SortFields.Add Key:=Range _
@@ -187,7 +187,7 @@ Sub ME2L_Clean()
     End With
 
     'Selects the entire Range for copy / paste to ME2l Sheet
-    zRange("A2:Z2").Select
+    Range("A2:Z2").Select
     Range(Selection, Selection.End(xlDown)).Select
 End Sub
 
@@ -224,4 +224,3 @@ Sub Better_Merge_Center()
         .ThemeFont = xlThemeFontMinor
     End With
 End Sub
-

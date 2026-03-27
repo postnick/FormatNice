@@ -3,6 +3,9 @@ Sub Format_Better()
     ' Formats my Spreadsheet
     ' Keyboard Shortcut Suggestion: Ctrl+Shift+M
 
+    'Start at the top-left cell so FreezePanes locks row 1 correctly
+        Range("A1").Select
+
     'Clears the Borders
         With Cells.Borders
             .Item(xlDiagonalDown).LineStyle = xlNone

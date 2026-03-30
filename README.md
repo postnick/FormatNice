@@ -1,5 +1,5 @@
-# FormatNice
-Excel Script that I use to Format my data nicely for my day to day use. 
+# Format Nice
+Excel Script that I use to Format my data nicely for my day to day use. Transparancy I have used AI from copilot to help me make my code better and faster. I also included some safer code prtactices as well.
 
 I like to keep mine in my PERSONAL.XLSB file and assign the various sections to shortcuts. 
 
